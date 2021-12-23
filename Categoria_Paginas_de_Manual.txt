@@ -1,0 +1,27 @@
+Categoria da páginas de Manual.
+
+    Programas executáveis ou comandos do Shell.
+    Chamadas do sistema – Linux System Calls
+    Funções de bibliotecas – documentação de bibliotecas C padrão do sistema.
+    Arquivos especiais – arquivos usados dentro do diretório /dev.
+    Formato e convenções de arquivos – contém o formato de alguns arquivos.
+    Jogos – dicas e comandos de jogos existentes no sistema.
+    Miscelânea de pacotes – documentação de pacotes, protocolos etc.
+    Comandos administrativos – comandos utilizados pelo pelo root.
+    Rotinas do Kernel.
+
+Refazer banco de dados de páginas de manual.
+
+Debian: mandb
+
+Red Hat: man-db​
+
+
+Diretório das páginas de Manual: /usr/share/doc
+
+Diretório da documentação: /usr/share/man
+
+Diretório das infopages: /usr/share/info
+
+
+

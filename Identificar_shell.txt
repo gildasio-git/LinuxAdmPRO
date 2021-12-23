@@ -1,0 +1,15 @@
+No prompt de comandos execute: 
+
+# ​shopt login_shell​
+
+Se a resposta for:
+
+login_shell        on​
+
+    É um shell de login
+
+Se a resposta for:
+
+login_shell        off
+
+   É um shell não login
