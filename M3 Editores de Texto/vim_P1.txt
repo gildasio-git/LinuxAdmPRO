@@ -1,0 +1,170 @@
+Comandos do vim:
+
+
+Comandos úteis no modo de inserção:
+
+Ctrl+y    - Repete, caracter por caracter, a linha acima a do cursor
+Ctrl+e    - Repete, caracter por caracter, a linha abaixo da do cursor
+Ctrl+w    - Apaga (na linha) a última palavra digitada anterior ao cursor
+Ctrl+u    - Apaga (na linha) da posição do cursor até o início da linha
+Ctrl+t    - Indenta linha atual
+Ctrl+d    - Desidenta linha atual
+
+Comando do modo de comandos
+
+j        - Movimenta o cursor para baixo
+k        - Movimenta o cursor para cima
+l        - Movimenta o cursor para direita
+h        - Movimenta o cursor para esquerda
+f[]        - Pressione f seguido de algum caractere para posicionar o cursor na próxima ocorrência desse caractere
+t[]        - A mesma coisa para o t, mas posiciona um caractere antes do caractere pressionado
+
+D        - Apaga da posição atual até o fim da linha
+J        - Junta duas linhas (não importa a posição do cursor, 5J irá juntar cinco linhas contíguas)
+dd        - Apaga toda a linha
+d3d        - Apaga a linha atual e mais duas
+dj        - Apaga 2 linhas abaixo
+dk        - Apaga 2 linhas acima
+dw        - Apaga até o fim da palavra
+dt"        - Apaga da posição atual até o fechamento das aspas
+5db        - Apaga cinco palavras para trás do cursor
+
+Ctrl+u    - Desfazer (o limite do buffer de memória)
+Ctrl+r    - Refazer
+
+yy ou Y    - Copia a linha
+yw        - Copia a próxima palavra
+y3w        - Copia as próximas 3 palavras
+y10j        - Copia mais 10 linhas abaixo
+y10k    - Copia mais 10 linhas acima
+
+P        - Cola após o cursor
+p        - Cola na posicão do cursor
+3P        - Cola 3 vezes após o cursor
+
+:w        - Salva as alterações
+:w!        - Força salvar as alterações
+:w file    - Salva as alterações no arquivo especificado
+:q        - Sai do Vim 'quit'
+:q!        - Força a saída sem salvar as alterações
+:wq ou ZZ- Salva as alterações e sai
+:wq!        - Força salvar as alterações e sair
+
+^^        - Volta ao começo da linha
+$        - Vai até o final da linha
+w        - Avança até a próxima palavra
+e        - Avança até o fim da palavra atual
+b        - Retorna ao início da palavra
+gg        - Retorna à primeira linha
+G        - Vai até a última linha
+:numero    - Vai até a linha especificada
+
+/string    - Pesquisar uma string no texto, aceita expressões regulares
+n        - Localiza a próxima ocorrência da string
+N        - Localiza a ocorrência anterior da string
+
+:s/REGEX/string    - Substituição aceita expressões regulares
+:s/old/new/        - Substitui a primeira ocorrência da string old por new na linha atual,
+:s/old/new/g        - Substitui a todas as ocorrências da string old por new na linha atual,
+:%s/old/new/        - Substitui a primeira ocorrência da string old por new em todo o arquivo
+:%s/old/new/g        - Substitui todas as ocorrências da string old por new em todo o arquivo
+:%s/old/new/gc    - Substitui todas as ocorrências da string old por new em todo o arquivo mas pede confirmação antes de alterar
+:3,20 s/old/new/g    - Substitui todas as ocorrências da string old por new das linhas 3 até linha 20
+
+Comandos diversos:
+:split    - Divide a tela horizontalmente
+:vsplit    - Divide a tela verticalmente
+Ctrl+w    - Move para a proxima janela
+Ctrl+w    - Somado as teclas de movimento anda para a janela da direção da tecla (hjkl)
+Ctrl+wr    - Rotaciona as janelas
+Ctrl+wq    - Fecha a janela atual
+Ctrl+wo    - Fecha todas as outra janelas, menos a atual
+:wall    - Salva todas as alterações em todas as janelas
+:qall        - Fecha todas as janelas
+
+:Vex        - Abre o Vertical File Explorer
+:ex        - Abre o File Explorer
+
+:!comando    - Executa um comando e mostra o resultado na tela (só mostra)
+:.!comando    - Executa o comando e cola o resultado substituindo a linha atual
+
+:sort         - Ordena o arquivo
+:sort n        - Ordena considerando o valor relativo dos números
+
+
+Comandos úteis no modo visual:
+
+v        - Entra no modo visual
+V        - Entra no modo modo visual selecionando a linha inteira
+Ctrl+V    - modo visual em colunas
+v$        - modo visual selecionando a linha inteira
+v%        - Estando com o cursor em cima de um delimitador, "{}[]()", inicia o modo visual e seleciona tudo que           estiver entre dois delimitadores, eles inclusive
+vib        - Estando entre dois delimitadores em uma posição qualquer, "{}[]()", inicia o modo visual e seleciona o               conteudo entre dois delimitadores
+vi"        - Inicia o modo visual e seleciona o conteudo entre duas " "
+vi'        - Inicia o modo visual e seleciona o conteudo entre duas ' '
+vu        - Torna minúsculo o caracter/seleção
+vU        - Torna maiúsculo o caracter/seleção
+vwu        - Marca a palavra e utiliza o comando u para deixá-la em minúsculo
+vwU        - A mesma coisa para deixá-la em maiúsculo
+ggVG    - Volta até o início do arquivo (gg), inicia o Modo Visual de Linhas  (V) e seleciona até o final do arquivo (G)
+Ctrl+d    - seleciona o bloco abaixo do cursor
+Ctrl+e    - seleciona o bloco acima do cursor
+
+
+Folders no Vim:
+Modos:
+    - syntax
+    - indent
+    - manual
+      
+zo        - Abre um folder
+zR        - Abre todas os folders do arquivo atual
+zc        - Fecha um folder
+zfap        - Cria um folder para o parágrafo 'ap' atual
+zd         - Apaga o folder (não o seu conteúdo)
+zf/casa    - Cria um folder até a palavra casa
+zj        - Desce até o próximo folder
+zk        - Sobe até o folder anterior
+zi        - Desabilita ou habilita os folders    
+    
+Comando do vim para salvar automaticamente edições de visualização ao salvar
+autocmd BufWinLeave *.* mkview
+
+Comando do vim para ler automaticamente edições de visualização ao abrir
+autocmd BufWinEnter *.* silent loadview
+
+Usar a barra de espaço para abrir/fechar um folder
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')v<CR>
+
+
+
+Corretor ortografico no VIM:
+
+Entre no /tmp
+# cd /tmp
+
+Baixe no site https://pt-br.libreoffice.org/projetos/vero/
+
+Versão 3.2
+# wget https://pt-br.libreoffice.org/assets/Uploads/PT-BR...​
+
+
+Descompacte o arquivo
+# unzip VeroptBRV320AOC.oxt
+
+Abra o vim
+# vim
+
+Digite para compilar o dicionario para o vim
+# :mkspell pt pt_BR
+
+Crie o diretório do spell para seu usuario
+# mkdir ~/.vim/spell
+
+Copie o arquivo gerado para seu diretório do spell
+# cp pt.utf-8.spl ~/.vim/spell
+
+No arquivo de configuração do vim (~/.vimrc) digite no final
+set spell speelllang=pt
+
+Todas as palavras que o vim achar que precisam de correção estarão grifadas
