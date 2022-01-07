@@ -1,0 +1,82 @@
+
+
+Avalie este conteúdo:
+
+Comandos do nano:
+
+
+Tecla Meta é Esc/Alt mas no modo gráfico o Alt é muito usado pelo gerenciador de janelas, então use o Esc.
+
+Abrir um arquivo numa determinada posição
+nano +LINHA,COLUNA <arquivo>
+
+Gravar uma Macro no nano:
+
+Esc+:    (inicia a gravação)
+
+         Faça sua macro
+
+Esc+:    (para a gravação)
+
+Para repetir a macro:
+
+Esc+;
+
+
+Ctrl+S       Salvar arquivo atual
+Ctrl+O    Salvar como
+Ctrl+R    Inserir o um arquivo no arquivo atual
+Ctrl+X    Fechar buffer e sair do nano, gravando ou não as alterações em buffer
+
+
+Ctrl+K       Recorta linha atual no buffer
+Meta+6    Copiar linha atual ou marcação no buffer
+Ctrl+U    Colar conteudo do buffer
+Meta+T    Recortar até o fim do arquivo
+Ctrl+]    Completa palavra atual se existir no buffer
+Meta+3    Comenta/descomenta uma linha ou marcação
+Meta+U    Desfaz última ação
+Meta+E    Refaz última ação desfeita
+
+
+Ctrl+Q       Pesquisa para trás no texto
+Ctrl+W    Pesquisa para frente no texto
+Meta+Q    Procura próxima ocorrência para trás no texto
+Meta+W    Procura próxima ocorrência para frente no texto
+Meta+R    Inicia uma sessão de substituição ou Ctrl+\
+
+
+Ctrl+H    Deleta o caractere antes do cursor      
+Ctrl+D    Deleta o caractere depois do cursor   
+Ctrl+Shift+Del       Deleta a palavra (ou parte) antes do cursor
+Ctrl+Del    Deleta a palavra (ou parte) depois do cursor
+
+
+Ctrl+T       Checagem ortográfica, se o spell estiver instalado
+Ctrl+J    Justificar parágrafo ou marcação
+Meta+J    Justificar o buffer inteiro
+Meta+:    Iniciar/parar a gravação de uma macro
+Meta+;    Repetir a macro
+
+
+Ctrl+A    Vai para o inicio da linha
+Ctrl+E    Vai para o fim da linha
+Meta+G   Vai para linha especificada
+Meta+]    Vai para o bracket complementar
+
+
+Ctrl+C       Informa a posição do cursor
+Meta+D    Informa a contagem de palavras/linhas/caracteres
+Ctrl+G    Informação de ajuda
+
+
+Meta+A    Liga/desliga a marcação de texto
+Tab        Indenta a região marcada
+Shift+Tab Remove indentação de uma região marcada
+Meta+N    Liga/desliga a numeração de Linhas
+Meta+P    Liga/desliga colocar os espaços visíveis
+
+
+Baixar vários syntax-highlighting para nano
+
+curl https://raw.githubusercontent.com/scopatz/nanorc/m... | sh
