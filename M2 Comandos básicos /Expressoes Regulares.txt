@@ -1,0 +1,49 @@
+Expressões Regulares
+
+Avalie este conteúdo:
+
+​Metacaracteres de REGEX
+
+
+ . (ponto)             - representa um caractere qualquer
+ 
+ ? (opcional)       - representa nenhum ou um do caractere anterior
+ 
+ *                          - representa nenhum, um ou mais do caractere anterior
+ 
+ +                         - representa um ou mais do caractere anterior
+
+{x}                      - repete x vezes o caractere anterior, pode ser um grupo ou uma lista também    
+
+{n,m}                 - repete de de n até m vezes o caratere anterior, pode ser um grupo ou uma lista também    
+
+ ^                        - representa o início de linha
+ 
+ $                         - representa o fim de linha
+ 
+ \b (borda)          - delimita inicio ou fim de palavra
+ 
+ \  (escape)         - torna literal qualquer caractere seguinte
+ 
+ (...) (grupo)        - trata um conjunto de caracteres como um único objeto
+ 
+ \1...\9 (retrovisor)    - repete um grupo pela posição, contar a partir do primeiro (
+ 
+ [...] (lista)            - casa apenas com os elementos dentro da lista, dentro da lista todo caractere é normal inclusive o . (ponto)
+                               Dentro da lista para usar o - (traço literal) coloque no fim da lista
+                                     ex: [A-Z-]  = qualquer caractere de A até Z e o traço
+               
+                               Dentro da lista para usar o ] (fecha colchetes literal) coloque no inicio da lista
+                                     ex: []A-Z] = qualquer caractere de A até Z e o fecha colchetes
+                   
+                               Podemos usar os intervalos da tabela ASCII: [0-9], [A-Z] , [a-z]
+                               Para poder facilitar o uso dos intervalos usamos as classes POSIX:
+                                  [:upper:],  [:lower:],  [:alpha:],  [:alnum:],  [:digit:],  [:xdigit:],  [:punct:]
+ 
+[^...]                    - casa com o que não está dentro da lista, segue as mesma regras da lista
+
+| (ou)                   - Exemplo: (mini|(su|hi)per)?mercado     => minimercado, supermercado, hipermercado, mercado
+ 
+ 
+
+Para se tornar um especialista em expressões regulares recomendo o livro "Expressões Regulares, uma abordagem divertida" do Aurélio Marinho Jargas, tenho ele no Kindle e sempre que me esqueço algo estou com ele à mão para consulta.

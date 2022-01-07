@@ -1,0 +1,42 @@
+Comandos de Backup - Parte 01
+
+Avalie este conteúdo:
+
+​Comandos de Backup:
+
+
+
+Comando dd​
+
+
+dd if=<arquivo/dispositivo de origem> of=<arquivo/dispositivo de destino>
+
+
+        bs= (block size)
+        count= (contagem de bs)
+        status=progress (mostra o progresso, menos quando usa o count)
+        conv=lcase (minúsculo)
+        conv=ucase (maiúsculo)
+        conv=fsync  (escreve os dados e os metadados antes de liberar o prompt)​
+
+
+
+Comando tar:
+
+tar <opções> <origem> <destino>
+
+
+    c ou --create - criar um novo arquivamento
+    v ou --verbose - verbose - mostrar mais informações
+    f ou --file - trabalhar com arquivo ao invés de dispositivo de fita
+    z ou --gzip - comprimir com gzip
+    Z ou --compress - comprimir com o compress
+    j ou --bzip2 - comprimir com o bzip2
+    J ou --xz - comprimir com o xz
+    t ou --list - listar o conteúdo do arquivo.tar
+    d ou --diff - Compara entre arquivo.tar e origem
+    r ou --append - Adiciona arquivos ao final do arquivo.tar (OBS: não funcioana em compactados)
+    x ou --extract - Extrai os arquivos de um arquivo tar
+    -C ou --directory - Informa o caminho para o tar comparar ou extrair arquivos
+    --skip-old-files - não sobrescreve arquivos
+    --keep-newer-files - só sobrescreve os mais antigos que os do arquivo.tar
