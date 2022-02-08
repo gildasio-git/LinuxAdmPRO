@@ -1,0 +1,27 @@
+​Estrutura dos arquivos:
+
+Nos arquivos de usuários o caractere de : (dois pontos) é o separador de campos.
+
+/etc/passwd (contas dos usuários) , a senha fica no arquivo shadow
+
+NOME-DO-USUARIO:SENHA:UID:GID-DO-GRUPO-PRIMARIO:GECOS:HOME:SHELL
+
+
+
+/etc/group (contas de grupos), a senha fica no arquivo gshadow
+
+NOME-DO-GRUPO:SENHA:GID:MEMBRO,MEMBRO
+
+
+
+/etc/shadow (senha dos usuários):
+
+NOME-DO-USUARIO:SENHA:DATA-DE-ALTERACAO-DA-SENHA:MINIMO-DIAS-DA-SENHA:MAXIMO-DIAS-DA-SENHA:DIAS-DE-AVISO-ANTES-DE-VENCER:DIAS-DE-INATIVIDADE:DATA-DA-EXPIRACAO:
+
+
+
+/etc/gshadow (senha dos grupos)
+
+NOME-DO-GRUPO:SENHA:ADMINISTRADOR:MEMBRO,MEMBRO...
+
+
