@@ -1,0 +1,11 @@
+​Arquivo do PAM para o SU:
+
+/etc/pam.d/su
+
+Grupo de controle do PAM:
+
+wheel
+
+Linha que restringe apenas os membros do grupo wheel a poder user o SU:
+
+auth       required   pam_wheel.so
