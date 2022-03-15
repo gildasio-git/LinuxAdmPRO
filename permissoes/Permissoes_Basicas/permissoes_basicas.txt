@@ -1,0 +1,35 @@
+​Comando de manipulação de Permissões:
+
+chmod <opções> <arquivo/diretorio>
+
+Permissões literais:
+
+rwx
+
+r - leitura
+
+w - escrita
+
+x - execução
+
+Conjuntos (usuário, grupo , outros):
+
+
+u - usuário
+
+g - grupo
+
+o - outros
+
+a - todos
+
++ atribui uma ou mais permissões
+
+-   remove ou mais permissões
+
+= mantém apenas as permissões especificadas (remove ou atribui se necessário)
+
+
+-R  - opção para aplicar permissões de forma recursiva
+
+
